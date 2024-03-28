@@ -1,3 +1,5 @@
+import reactImg from './assets/react-core-concepts.png'
+
 const reactDescriptions = ['Fundamental', 'Crucial', 'Core'];
 
 // 무작위로 숫자를 출력하는 함수
@@ -7,10 +9,11 @@ function genRandomInt(max) {
 
 function Header() {
   const description = reactDescriptions[genRandomInt(2)]
-  
+
   return (
     <header>
-      <img src="src/assets/react-core-concepts.png" alt="Stylized atom" />
+      {/*  import한 자바스크립트 객체를 src 요소로 넣기  */}
+      <img src={reactImg} alt="Stylized atom" /> 
       <h1>React Essentials</h1>
       <p>
         {/* 중괄호 안의 내용에 리턴값이 바로 나오는 자바스크립트 코드를 자유롭게 추가 가능 */}
